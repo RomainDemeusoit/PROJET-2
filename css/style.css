@@ -1,0 +1,42 @@
+* {
+    font-family: 'Raleway', sans-serif;     /* Appelle de la police d'écriture "Raleway" */
+}
+
+* {
+    box-sizing: border-box;
+   /* box-sizing est appliqué à tous les éléments */
+}
+
+#header {
+    
+}
+
+#marginbody {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#logo {
+    margin: 50px;
+    max-width: 40%;
+	height: auto;
+}
+
+.bouton {
+    margin: 50px;
+}
+
+#right {
+    position:absolute;
+    right:0px;
+    bottom:0px;
+}
+
+@media (max-width: 800px) {
+}
