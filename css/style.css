@@ -7,36 +7,751 @@
    /* box-sizing est appliqué à tous les éléments */
 }
 
-#header {
+a:link {                    /* Fait disparaitre décoration des liens*/
+    text-decoration: none ; 
+} 
+
+button {                    /* Fait disparaitre décoration des boutons*/
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+body {
+    display: flex ;
+    flex-direction: column ;
+}
+
+h1 {
+    margin: 0px;
+    font-size: x-large;
+}
+
+h2 {
+    font-size: x-large;
+}
+
+h3 {
+    margin: 0px;
+}
+
+p {
+    font-size: medium;
+}
+
+a {
+    color: black;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------MENU-------------------------------------------------------------------------------- */
+
+nav {
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    flex-direction: column;
+}
+
+.logo {
+    align-self: center;
+    margin-left: 3.2rem;
+    margin-top: 1rem;
+}
+
+.logo>img {
+    width: 6rem;
+}
+
+.menu {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+/* ---------------------------------------------------------------------------------------BOUTONS DE NAVIGATION-------------------------------------------------------------------------------- */
+
+.buttonnav {
+    width: 10rem;
+    color: black;
+    border-top: solid 3px white;   
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;   
+    font-weight: 400; 
+}
+
+.buttonnav:hover {
+    width: 10rem;
+    color: #0065FC;
+    border-top: solid 3px #0065FC;  
+    font-weight: 400;      
+}
+
+#espacement {
+    width: 100%;
+}
+
+/* ---------------------------------------------------------------------------------------FORMULAIRE DE RECHERCHE-------------------------------------------------------------------------------- */
+
+.searchform {
+    border: none;
+    font-weight: bold;
+    color: black;
+    padding: 1.05rem;
+    border-top: solid 2px #F2F2F2;
+    border-bottom: solid 2px #F2F2F2;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.position {
+    background-color: #F2F2F2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding: 1.2rem;
+    font-size: large;
+}
+
+.searchbutton {
+    padding: 1.05rem;
+    border: 2px solid #0065FC;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    color: white;
+    font-weight: bold;
+    background-color: #0065FC;
+}
+
+.loupebutton {
+    visibility: hidden;
+}
+
+/* ---------------------------------------------------------------------------------------FILTRE-------------------------------------------------------------------------------- */
+
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+.filterbutton {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    width: auto;
+    height: 3.2rem;
+    padding-right: 1rem;
+    background-color: white;
+    border: solid 2px;
+    border-color: lightgrey;
+    border-radius: 35px;
+}
+
+.filterbutton:hover {
+    background-color: #0065FC;
+    color: white;
+}
+
+.filterlogo {
+    font-size: large;
+    width: 3.2rem;
+    height: 3.2rem;
+    color: #0065FC;
+    border-radius: 50%;
+    padding: 16px 13px;
+    margin-right: 0.5rem;
+    background-color: #DEEBFF;
+}
+
+.filter>h3 {
+    margin: 0.5rem;
+    margin-right: 2rem;
+}
+
+.filter>div {
+    display: flex;
+    justify-content: space-between;
+    width: 55rem;
+}
+
+.filter>i {
+    color: #0065FC;
+    border-radius: 50%;
+    padding: 15px;
+    background-color: #DEEBFF;
+    position: relative;
+    left: 5px;
+}
+
+/* ---------------------------------------------------------------------------------------AIDE-------------------------------------------------------------------------------- */
+
+.aide {
+    display: flex;
+    align-items: center;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.aide>i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    margin-right: 1rem;
+    padding: 0.7rem;
+    width: 22px;
+    height: 11px;
+    border: solid 1px lightgrey;
+    color: #0065FC;
+    background-color: white;
+    border-radius: 50%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------HEBERGEMENTS_GENERAL-------------------------------------------------------------------------------- */
+
+#hebergements_general {
+    display: flex;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+/* ---------------------------------------------------------------------------------------HEBERGEMENTS-------------------------------------------------------------------------------- */
+
+.hebergements {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F2F2F2;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 67%;
+}
+
+.hebergements>h2 {
+    margin-right: 30rem;
+    margin-top: 0px;
+}
+
+.hebergements>a {
+    background-color: white;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    width: 17rem;
+    height: 14rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.hebergements>a>img {
+    width: 17rem;
+    height: 9rem;
+    border: solid 4px white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    object-fit: cover;
+}
+
+.hebergements>a>h3 {
+    padding: 0.2rem;
+    padding-left: 1rem;
+}
+
+.hebergements>a>div {
+    padding: 0.2rem;
+    padding-left: 1rem;
+}
+
+.afficher_plus {
+    padding: 0.7rem;
+    background-color: #F2F2F2 !important;
+    width: auto !important;
+    height: auto !important;
+    box-shadow: none !important;
+    margin: 0px !important;
+    margin-right: 30rem !important;
+}
+
+/* ---------------------------------------------------------------------------------------LES PLUS POPULAIRES-------------------------------------------------------------------------------- */
+
+.les_plus_populaires {
+    background-color: #F2F2F2;
+    padding: 2rem;
+    padding-bottom: 0.5rem;
+    border-radius: 20px;
+    width: 33%;
+    margin-left: 1.5rem;
+}
+
+.les_plus_populaires>div>h2 {
+    margin-top: 0px;
+}
+
+.les_plus_populaires>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: x-large;
+}
+
+.les_plus_populaires>a {
+    background-color: white;
+    margin-bottom: 1.5rem;
+    border-radius: 20px;
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.les_plus_populaires>a>div {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    text-align: left;
+}
+
+.les_plus_populaires>a>div>div {
+    padding-top: 1rem;
+}
+
+.les_plus_populaires>a>img {
+    width: 10rem;
+    height: 10rem;
+    border: solid 4px white;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* ---------------------------------------------------------------------------------------ETOILES-------------------------------------------------------------------------------- */
+
+.plein {
+    color: #0065FC;
+}
+
+.vide {
+    color: #F2F2F2;
+}
+
+/* ---------------------------------------------------------------------------------------ACTIVITES-------------------------------------------------------------------------------- */
+
+#activites {
+    margin-left: 2rem;
+}
+
+.activites {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    height: auto;
+}
+
+.activites_col2 {
+    height: 28.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.activites_col4 {
+    height: 28.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.large {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.large>img {
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 21rem;
+    height: 25rem;
+}
+
+.large>h3 {
+    display: flex;
+    margin: 1rem;
+}
+
+.medium {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.medium>img {
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 21rem;
+    height: 12rem;
+}
+
+.medium>h3 {
+    display: flex;
+    margin: 1rem;
+}
+
+.small {
+    border-radius: 20px;
+    box-shadow: 3px 3px 10px grey;
+}
+
+.small>img {
+    object-fit: cover;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    width: 21rem;
+    height: 6rem;
+}
+
+.small>h3 {
+    display: flex;
+    margin: 1rem;
+}
+
+/* ---------------------------------------------------------------------------------------FOOTER-------------------------------------------------------------------------------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #F2F2F2;
+    margin-top: 4rem;
+    padding: 3rem;
+}
+
+footer>div {
+    display: flex;
+    flex-direction: column;
+    margin-right: 13rem;
+}
+
+footer>div>h4 {
+    margin-top: 0px;
+    margin-bottom: 1rem;
+    font-size: large;
+}
+
+footer>div>a {
+    font-weight: 400;
+    margin-bottom: 1rem;
+    width: 15rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------MEDIAS QUERIES-------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 992px) {
+    .filter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .filter>h3 {
+        margin-top: 1rem;
+    }
+
+    .filter>div {
+        width: 40rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .filterbutton {
+        margin: 0.5rem;
+    }
+
+    #hebergements_general {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hebergements {
+        width: 95%;
+        margin-bottom: 2rem;
+    }
+
+    .hebergements>h2 {
+        margin-right: 10rem;
+    }
+
+    .afficher_plus {
+        margin-right: 10rem !important; 
+    }
+
+    .les_plus_populaires {
+        width: 60%;
+    }
+
+    .activites {
+        flex-wrap: wrap;
+    }
+
+    .large {
+        margin-bottom: 3rem;
+    }
+
+    footer {
+        justify-content: space-between;
+    }
+
+    footer>div {
+        margin-right: 0px;
+    }
+
+    footer>div>a {
+        width: 13rem !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        flex-direction: column ;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .logo {
+        align-self: center;
+        margin-left: 0vw;
+        margin-bottom: 3vh;
+    }
+
+    .buttonnav {
+        color: black ;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        width: 50%;
+        margin: auto;
+        border-bottom: solid 3px;
+        border-top: 0px;
+        border-color: #F2F2F2;
+    }
+
+    .buttonnav:active {
+        color: #0065FC;
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        width: 50vw;
+        margin: auto;
+        border-bottom: solid 3px;
+        border-color: #0065FC;
+        border-top: 0px;
+    }
+
+    .searchbutton {
+        display: none;
+    }
+
+    .searchform {
+        padding-right: 3rem;
+    }
+
+    .loupebutton {
+        visibility: visible;
+        color: white;
+        border-radius: 15px;
+        padding: 1.15rem;
+        background-color: #0065FC;
+        position: relative;
+        right: 15px;
+    }
+
+    .filter>div {
+        width: 22rem;
+    }
+
+    .aide>p {
+        margin: 0px;
+    }
+
+    #hebergements_general {
+        flex-direction: column-reverse;
+        margin-bottom: 0px;
+    }
+
+    .afficher_plus {
+        background-color: white !important;
+        margin-right: 0px !important;
+    }
+
+    .les_plus_populaires {
+        margin: 0px;
+        border-radius: 0px;
+        width: 100vw;
+    }
+
+    .les_plus_populaires>a {
+        height: 9rem;
+    }
+
+    .les_plus_populaires>a>img {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .hebergements {
+        background-color: white;
+        width: 100vw;
+        margin-bottom: 0px;
+    }
+
+    .hebergements>h2 {
+        margin-right: 0px;
+    }
+
+    .hebergements>a {
+        width: 21rem;
+        height: 12rem;
+    }
+
+    .hebergements>a>img {
+        width: 21rem;
+        height: 7rem;
+    }
+
+    .hebergements>a {
+        font-weight: 800;
+    }
+
+    .activites {
+        justify-content: center;
+    }
+
+    .large {
+        margin-bottom: 1.5rem;
+    }
+
+    .activites_col2 {
+        margin-bottom: 1.5rem;
+        height: 24.5rem;
+    }
+
+    .activites_col4 {
+        height: 24.5rem;
+    }
+
+    .large>img {
+        height: 8rem;
+    }
+
+    .medium>img {
+        height: 8rem;
+    }
+
+    .small>img {
+        height: 8rem;
+    }
+
+    footer {
+        margin-top : 3rem;
+        flex-direction: column;
+        padding: 1rem;
+        padding-top: 2.5rem;
+    }
+
+    footer>div {
+        padding: 1.5rem;
+        padding-top: 0px;
+    }
+
+    footer>div>a {
+        margin-bottom: 0.7rem;
+        width: 16rem !important;
+    }
+
+    
+
+    
+
     
 }
 
-#marginbody {
-    margin-left: 30px;
-    margin-right: 30px;
+
+
+
+
+/*
+
+.formulaire { 
+    margin-top: 10px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;  
+    width: 340px;
+    height: 40px;
 }
 
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#logo {
-    margin: 50px;
-    max-width: 40%;
-	height: auto;
-}
-
-.bouton {
-    margin: 50px;
-}
-
-#right {
-    position:absolute;
-    right:0px;
-    bottom:0px;
-}
-
-@media (max-width: 800px) {
-}
+*/
